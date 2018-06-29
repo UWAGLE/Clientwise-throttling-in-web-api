@@ -1,0 +1,43 @@
+﻿[
+    {
+        "clientName": "default",
+        "throttlePolicy": {
+            "whiteListClients": [ "192.168.1.1" ],
+            "clientRateLimiting": [
+                {
+                    "key": "UsingClientKey",
+                    "keyType": "clientKey",
+                    "policy": [
+                        {
+                            "period": "1m",
+                            "limit": 2
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "clientName": "Client1",
+        "clientKey": "EF56137B67F832F07832F07175AB3EEF1A5BF3C65DD293C075AB3EEF1A",
+        "throttlePolicy": {
+            "whiteListClients": [ ],
+            "clientRateLimiting": [
+                {
+                    "key": "UsingClientKey",
+                    "keyType": "clientKey",
+                    "policy": [
+                        {
+                            "period": "1m",
+                            "limit": 2
+                        },
+                        {
+                            "period": "1d",
+                            "limit": 200
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+]

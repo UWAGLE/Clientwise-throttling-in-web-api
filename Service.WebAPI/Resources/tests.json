@@ -1,0 +1,49 @@
+﻿{
+    "item": [
+        {
+            "id": "10001",
+            "name": "AddEmployee v1",
+            "testType": 1,
+            "request": {
+                "url": "{{servername}}/api/v1/AddEmployee",
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+
+                    },
+                    {
+                        "key": "x",
+                        "value": "EF56137B67F832F07832F07175AB3EEF1A5BF3C65DD293C075AB3EEF1A"
+
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": [
+                        {
+                            "Id": 1000123,
+                            "Name": "Ujjwal Wagle",
+                            "BirthDate": "03-May-1988",
+                            "Designation": "Software Developer",
+                            "Experience": "6 Years"
+                        },
+                        {
+                            "Id": 1000124,
+                            "Name": "Aniket Phadte",
+                            "BirthDate": "24-JUN-1994",
+                            "Designation": "Software Developer",
+                            "Experience": "2 Years"
+                        }
+
+                    ]
+                }
+
+            },
+            "response": {
+                "result": "2 records added successfully."
+            }
+        }
+    ]
+}
