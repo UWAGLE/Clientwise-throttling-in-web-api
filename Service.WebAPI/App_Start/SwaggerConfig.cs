@@ -329,18 +329,6 @@ namespace Service.WebAPI
                 var parameterValuePair = parameterValuePairs.FirstOrDefault(p => p.Key.IndexOf(param.name, StringComparison.InvariantCultureIgnoreCase) >= 0);
                 param.@default = parameterValuePair.Value;
             }
-            if (operation.operationId == "Lore_GetReportPDF")
-            {
-                operation.produces = new[] { "application/octet-stream", "application/pdf", "application/json" };
-                operation.responses["200"].schema = new Schema { type = "PDF File" };
-
-            }
-            else if (operation.operationId == "Lore_GetI7" || operation.operationId == "Lore_GetI71" || operation.operationId == "Lore_GetI72")
-            {
-                operation.produces = new[] { "application/octet-stream", "image/png", "application/json" };
-                operation.responses["200"].schema = new Schema { type = "Image" };
-
-            }
         }
 
         private IDictionary<string, object> GetParameterValuePairs(HttpActionDescriptor actionDescriptor)
